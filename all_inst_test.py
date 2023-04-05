@@ -16,7 +16,6 @@ import time
 import sys
 import os
 from collections import defaultdict
-from tqdm import tqdm
 import random
 random.seed(10)
 
