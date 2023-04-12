@@ -1,13 +1,3 @@
-'''
-This is a test script that will take in a list of RISCV instructions and their descriptions and parameter requirements, parse them,
-generate an input string for each instruction consisted of the instruction mnemonic and valid parameters and do the following:
-- split/sort them per required extensions (first RV64 and without),
-- for each instruction parse the required operands, check their type and generate the input/instruction (mneumonnic + operand) string,
-- write an assembly file (.s) - one per required extension -> one per instruction,
-- assemble with gcc toolchain, parse the resulting .o file with objdump to get the assembled bytes,
-- assemble each instruction with keystone and assert equality with gcc toolchain result,
-- report the results (or generate python regression testing files)
-'''
 from capstone import Cs
 from keystone import *
 from qiling import Qiling
